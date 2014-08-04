@@ -1,0 +1,1376 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.action.extension" value="action"/>
+
+
+    <package name="sysmgr" namespace="/sysmgr" extends="json-default">
+        <global-results>
+            <result name="relogin" type="redirect">/index.jsp</result>
+        </global-results>
+        <!--用户类Action-->
+        <action
+                name="user_*"
+                class="com.tyut.sssy.sysmgr.actions.UserAction"
+                method="{1}">
+            <!-- 显示界面 -->
+            <result name="show_add_ui_succ">/proj/sys_setting/user_add.jsp</result>
+            <result name="show_update_ui_succ">/proj/sys_setting/user_modify.jsp</result>
+
+            <!-- 操作 -->
+            <!--<result name="list" type="redirect">user/user_showListUI.action</result>-->
+            <result name="login" type="redirect">/index.jsp</result>
+            <result name="change_pwd">/proj/change_pwd/change_pwd.jsp</result>
+            <result name="home">/main.jsp</result>
+            <result type="json">
+                <param name="success"/>
+                <param name="msg"/>
+            </result>
+        </action>
+        <!-- end -->
+
+        <!--菜单类Action-->
+        <action
+                name="menu_*"
+                class="com.tyut.sssy.sysmgr.actions.MenuAction"
+                method="{1}">
+            <!-- 显示添加界面 -->
+            <result name="show_add_ui_succ">/proj/sys_setting/menu_add.jsp</result>
+            <result name="show_add_succ">/proj/sys_setting/menu_add.jsp</result>
+
+            <!--显示修改界面-->
+            <result name="show_modify_ui_succ">/proj/sys_setting/menu_modify.jsp</result>
+            <result name="show_modify_succ">/proj/sys_setting/menu_modify.jsp</result>
+
+        </action>
+        <!-- end -->
+
+        <!--角色类Action-->
+        <action
+                name="role_*"
+                class="com.tyut.sssy.sysmgr.actions.RoleAction"
+                method="{1}">
+            <!-- 显示添加界面 -->
+            <result name="show_add_ui_succ">/proj/sys_setting/role_add.jsp</result>
+            <result name="show_add_succ">/proj/sys_setting/role_add.jsp</result>
+
+            <!--显示修改界面-->
+            <result name="show_modify_ui_succ">/proj/sys_setting/role_modify.jsp</result>
+            <result name="show_modify_succ">/proj/sys_setting/role_modify.jsp</result>
+
+
+        </action>
+        <!-- end -->
+
+        <!--企业规模-->
+        <action
+                name="companyScale_*"
+                class="com.tyut.sssy.sysmgr.actions.CompanyAction"
+                method="{1}">
+            <!--显示主页面-->
+            <result name="show_mgr_succ">/proj/sys_setting/company_scale_mgr.jsp</result>
+
+            <!-- --><!-- 显示添加界面 --><!--
+            <result name="show_add_ui_succ">/proj/sys_setting/companyscale_add.jsp</result>
+            <result name="show_add_succ">/proj/sys_setting/companyscale_add.jsp</result>
+
+            --><!--显示修改界面--><!--
+            <result name="show_modify_ui_succ">/proj/sys_setting/companyscale_modify.jsp</result>
+            <result name="show_modify_succ">/proj/sys_setting/companyscale_modify.jsp</result>-->
+        </action>
+        <!-- end -->
+
+        <!--企业规模-->
+        <action
+                name="unitEmpBusiness_*"
+                class="com.tyut.sssy.sysmgr.actions.UnitEmpBusinessAction"
+                method="{1}">
+            <!--显示主页面-->
+            <result name="show_mgr_succ">/proj/sys_setting/unit_emp_business_mgr.jsp</result>
+        </action>
+        <!-- end -->
+
+        <!--设定本单位主要行业-->
+        <action
+                name="majorIndustry_*"
+                class="com.tyut.sssy.sysmgr.actions.MajorIndustryAction"
+                method="{1}">
+            <!--显示主页面-->
+            <result name="show_mgr_succ">/proj/sys_setting/major_industry_mgr_1.jsp</result>
+
+        </action>
+        <!-- end -->
+
+
+        <!--指标权重及分值-->
+        <action
+                name="indexWeight_*"
+                class="com.tyut.sssy.sysmgr.actions.IndexWeightAndValueAction"
+                method="{1}">
+            <!--显示主页面-->
+            <result name="show_mgr_succ">/proj/sys_setting/index_weight_mgr.jsp</result>
+            <result name="show_modify_ui_succ">/proj/sys_setting/index_weight_modify.jsp</result>
+        </action>
+        <!-- end -->
+
+        <!--指标初始值设定-->
+        <action
+                name="indexInit_*"
+                class="com.tyut.sssy.sysmgr.actions.IndexInitConfigAction"
+                method="{1}">
+            <!--显示主页面-->
+            <result name="show_mgr_succ">/proj/sys_setting/index_init_config_mgr.jsp</result>
+            <result name="show_modify_ui_succ">/proj/sys_setting/index_init_config_modify.jsp</result>
+        </action>
+        <!-- end -->
+
+        <!--指标初始值设定-->
+        <action
+                name="indexFeature_*"
+                class="com.tyut.sssy.sysmgr.actions.IndexFeatureDBAction"
+                method="{1}">
+            <!--显示主页面-->
+            <result name="show_mgr_succ">/proj/sys_setting/index_feature_db_mgr.jsp</result>
+            <result name="show_modify">/proj/sys_setting/index_feature_db_modify.jsp</result>
+        </action>
+        <!-- end -->
+
+        <!--发展指数过滤条件维护-->
+        <action
+                name="filterCon_*"
+                class="com.tyut.sssy.sysmgr.actions.DIFilterConAction"
+                method="{1}">
+            <!--显示主页面-->
+            <result name="show_mgr_succ">/proj/sys_setting/develop_index_filter_con_mgr.jsp</result>
+            <result name="show_modify_ui_succ">/proj/sys_setting/develop_index_filter_modify.jsp</result>
+
+        </action>
+        <!-- end -->
+
+
+        <!--发展指数权重维护-->
+        <action
+                name="weight_*"
+                class="com.tyut.sssy.sysmgr.actions.DevelopIndexWeightAction"
+                method="{1}">
+            <!--显示主页面-->
+            <result name="show_mgr_succ">/proj/sys_setting/develop_index_weight_mgr.jsp</result>
+            <result name="show_modify_ui_succ">/proj/sys_setting/develop_index_weight_modify.jsp</result>
+        </action>
+        <!-- end -->
+
+
+        <!--年度计划维护-->
+        <action
+                name="annualPlan"
+                class="com.tyut.sssy.sysmgr.actions.AnnualPlanAction"
+                >
+            <!--显示主页面-->
+            <result name="show_mgr">/proj/sys_setting/annual_plan_setting/annual_plan_mgr.jsp</result>
+            <result name="show_modify_ui_succ">/proj/sys_setting/annual_plan_setting/annual_plan_modify.jsp</result>
+            <result name="show_add_ui_succ">/proj/sys_setting/annual_plan_setting/annual_plan_add.jsp</result>
+            <result name="show_query_succ">/proj/sys_setting/annual_plan_setting/annual_plan_query.jsp</result>
+            <result name="show_query_faiure">/proj/sys_setting/annual_plan_setting/annual_plan_mgr.jsp</result>
+            <result name="show_add_ui_failure">/proj/sys_setting/annual_plan_setting/annual_plan_mgr.jsp</result>
+            <result name="show_modify_failure">/proj/sys_setting/annual_plan_setting/annual_plan_mgr.jsp</result>
+        </action>
+        <!-- end -->
+
+
+        <action name="industryGraphic"
+                class="com.tyut.sssy.sysmgr.actions.IndustryGraphicAction">
+            <result name="show_mgr">/proj/sys_setting/industry_graphic_mgr.jsp</result>
+            <result name="show_modify">/proj/sys_setting/industry_graphic_modify.jsp</result>
+            <result name="show_add">/proj/sys_setting/industry_graphic_add.jsp</result>
+
+        </action>
+
+        <action name="registerTypeGraphic"
+                class="com.tyut.sssy.sysmgr.actions.RegisterTypeGraphicAction">
+            <result name="show_mgr">/proj/sys_setting/register_type_graphic_mgr.jsp</result>
+            <result name="show_modify">/proj/sys_setting/register_type_graphic_modify.jsp</result>
+            <result name="show_add">/proj/sys_setting/register_type_graphic_add.jsp</result>
+        </action>
+
+        <action name="taxCategoryGraphic"
+                class="com.tyut.sssy.sysmgr.actions.TaxCategoryGraphicAction">
+            <result name="show_mgr">/proj/sys_setting/tax_category_graphic_mgr.jsp</result>
+            <result name="show_modify">/proj/sys_setting/tax_category_graphic_modify.jsp</result>
+            <result name="show_add">/proj/sys_setting/tax_category_graphic_add.jsp</result>
+        </action>
+        <action name="numberFormat"
+                class="com.tyut.sssy.sysmgr.actions.NumberFormatAction">
+            <result name="show_modify">/proj/sys_setting/number_unit_graphic_setting.jsp</result>
+            <result name="success">/proj/sys_setting/number_unit_graphic_setting.jsp</result>
+        </action>
+
+    </package>
+
+    <!-- 数据导入 -->
+    <package name="data" extends="struts-default">
+        <action
+                name="data_*"
+                class="com.tyut.sssy.data.actions.DataAction"
+                method="{1}">
+
+            <!--<result name="data_import_succ">/proj/data_import_analyze/data_import_analyze.jsp</result>-->
+            <result name="data_analyze_succ">/proj/data_import_analyze/data_analyze.jsp</result>
+            <result name="zdsy_data_import">/proj/data_import_analyze/data_import.jsp</result>
+            <result name="zr_data_import">/proj/data_import_analyze/data_import.jsp</result>
+            <result name="refresh_code">/proj/data_import_analyze/data_import.jsp</result>
+            <result name="data_generate_succ">/proj/data_import_analyze/data_analyze.jsp</result>
+
+        </action>
+    </package>
+
+    <!--图表链接功能{-->
+    <package name="graphic" extends="struts-default">
+
+        <!--税收类查询起-->
+        <!--税收完成{-->
+        <action name="inputFinish" class="com.tyut.sssy.infosearch.actions.graphic.tax.TaxFinishGraphicAction">
+        </action>
+        <!--}税收完成-->
+
+        <!--税收结构变化{-->
+        <action name="taxStrucChange" class="com.tyut.sssy.infosearch.actions.graphic.tax.TaxStrucChangeGraphicAction">
+        </action>
+        <!--}税收变化-->
+
+        <!--待解税金余额{-->
+        <action name="taxResolveBalance"
+                class="com.tyut.sssy.infosearch.actions.graphic.tax.TaxResolveForBalanceGraphicAction">
+        </action>
+        <!--}待解税金余额-->
+
+        <!--待解税金变动{-->
+        <action name="taxResolveChange"
+                class="com.tyut.sssy.infosearch.actions.graphic.tax.TaxResolveForChangeGraphicAction">
+        </action>
+        <!--}待解税金变动-->
+
+        <!--欠缴税金明细{-->
+        <action name="taxOwn" class="com.tyut.sssy.infosearch.actions.graphic.tax.TaxOwnForDetailGraphicAction">
+        </action>
+        <!--}欠缴税金明细-->
+
+        <!--欠缴税金明细{-->
+        <action name="taxChangeForBigFirm"
+                class="com.tyut.sssy.infosearch.actions.graphic.tax.TaxChangeForBigFirmGraphicAction">
+        </action>
+        <!--}欠缴税金明细-->
+        <!--税收类查询止-->
+
+        <!--税源类查询起-->
+
+        <action name="taxResSumChange"
+                class="com.tyut.sssy.infosearch.actions.graphic.resource.TaxResourceSumChangeGraphicAction">
+        </action>
+        <action name="taxResQuChange"
+                class="com.tyut.sssy.infosearch.actions.graphic.resource.TaxResourceQualityChangeGraphicAction">
+        </action>
+        <!--税源-->
+
+        <!--税负{-->
+        <action name="taxBurden" class="com.tyut.sssy.infosearch.actions.graphic.burden.TaxBurdenGraphicAction">
+        </action>
+        <!--}税负-->
+
+        <!--重点税源监测户数统计-->
+        <action name="firmCounterMonitor"
+                class="com.tyut.sssy.infosearch.actions.graphic.resource.FirmCounterMonitorGraphicAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">taxResourceSearch_taxResourceMonitorFirmDetailTable</param>
+                <param name="ssjgDm">${ssjgDm}</param>
+                <param name="qygm">${qygm}</param>
+                <param name="hydlDm">${hydlDm}</param>
+                <param name="qyzclx">${qyzclx}</param>
+                <param name="nd">${nd}</param>
+                <param name="monthPeriod">${monthPeriod}</param>
+                <param name="xmbz">${xmbz}</param>
+            </result>
+        </action>
+        <!--END-->
+
+        <!--重点税源监测户数统计-->
+        <action name="firmDetailMonitor"
+                class="com.tyut.sssy.infosearch.actions.graphic.resource.FirmDetailMonitorGraphicAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">taxResourceSearch_firmInfoSearchTable</param>
+                <param name="nsrsbh">${nsrsbh}</param>
+                <param name="nd">${nd}</param>
+                <param name="monthPeriod">${monthPeriod}</param>
+            </result>
+        </action>
+        <!--END-->
+
+        <!--企业基础信息查询-->
+        <action name="firmBaseInfo"
+                class="com.tyut.sssy.infosearch.actions.graphic.resource.FirmBaseInfoGraphicAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">taxResourceSearch_firmRunInfoTable</param>
+                <param name="nsrsbh">${nsrsbh}</param>
+                <param name="nd">${nd}</param>
+                <param name="monthPeriod">${monthPeriod}</param>
+            </result>
+        </action>
+        <!--END-->
+
+        <!--企业经营信息查询-->
+        <action name="firmRunInfo_*"
+                class="com.tyut.sssy.infosearch.actions.graphic.resource.FirmRunInfoGraphicAction"
+                method="{1}">
+            <result name="QUERY_INTERST" type="redirectAction">
+                <param name="actionName">taxResourceSearch_interestTable</param>
+                <param name="nsrsbh">${nsrsbh}</param>
+                <param name="nd">${nd}</param>
+                <param name="monthPeriod">${monthPeriod}</param>
+            </result>
+            <result name="QUERY_ASSET" type="redirectAction">
+                <param name="actionName">taxResourceSearch_assetLiabilityTable</param>
+                <param name="nsrsbh">${nsrsbh}</param>
+                <param name="nd">${nd}</param>
+                <param name="monthPeriod">${monthPeriod}</param>
+            </result>
+        </action>
+        <!--END-->
+
+        <!--利润表-->
+        <action name="interestGraphic"
+                class="com.tyut.sssy.infosearch.actions.graphic.resource.InterestGraphicAction">
+        </action>
+        <!--End-->
+
+        <!--负债表-->
+        <action name="assetGraphic"
+                class="com.tyut.sssy.infosearch.actions.graphic.resource.AssetGraphicAction">
+        </action>
+        <!--End-->
+
+
+        <!--税源类查询止-->
+
+        <!--税负类-->
+        <action name="burdenGraphic"
+                class="com.tyut.sssy.infosearch.actions.graphic.burden.TaxBurdenGraphicAction">
+        </action>
+        <!--end-->
+        <!--税负类查询止-->
+
+        <!--决策类-->
+
+        <!--税收增长与税源发展指数-->
+        <action name="taxGrowGraphic"
+                class="com.tyut.sssy.infosearch.actions.graphic.decision.TaxGrowAndDevelopIndexGraphicAction">
+        </action>
+        <!--end-->
+
+        <!--税收结构分析-->
+        <action name="taxStrucAnalysisGraphic"
+                class="com.tyut.sssy.infosearch.actions.graphic.decision.TaxStrucAnalysisGraphicAction">
+        </action>
+        <!--end-->
+
+        <!--税收类所有指标-->
+        <action name="taxAllIndexGraphic"
+                class="com.tyut.sssy.infosearch.actions.graphic.decision.TaxAllIndexsAnalysisGraphicAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">decisionAnalysisSearch_taxCollectionSubIndexTable</param>
+                <param name="swjg">${swjg}</param>
+                <param name="nsrsbh">${nsrsbh}</param>
+                <param name="qyzclx">${qyzclx}</param>
+                <param name="cy">${cy}</param>
+                <param name="hy">${hy}</param>
+                <param name="fxzb">${fxzb}</param>
+                <param name="nd">${nd}</param>
+                <param name="monthPeriod">${monthPeriod}</param>
+            </result>
+        </action>
+        <!--end-->
+
+        <!--税收类分指标分析-->
+        <action name="taxSubIndexGraphic"
+                class="com.tyut.sssy.infosearch.actions.graphic.decision.TaxSubIndexAnalysisGraphicAction">
+        </action>
+        <!--end-->
+
+        <!--税源类所有指标-->
+        <action name="taxResourceAllIndexGraphic"
+                class="com.tyut.sssy.infosearch.actions.graphic.decision.TaxResourceAllIndexsAnalysisGraphicAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">decisionAnalysisSearch_taxResourceSubIndexTable</param>
+                <param name="swjg">${swjg}</param>
+                <param name="nsrsbh">${nsrsbh}</param>
+                <param name="qyzclx">${qyzclx}</param>
+                <param name="cy">${cy}</param>
+                <param name="hy">${hy}</param>
+                <param name="fxzb">${fxzb}</param>
+                <param name="nd">${nd}</param>
+                <param name="monthPeriod">${monthPeriod}</param>
+            </result>
+        </action>
+        <!--end-->
+
+        <!--税源分指标微观分析-->
+        <action name="taxResourceSubIndexGraphic"
+                class="com.tyut.sssy.infosearch.actions.graphic.decision.TaxResourceSubIndexAnalysisGraphicAction">
+        </action>
+        <!--end-->
+
+        <!--税负类所有指标-->
+        <action name="taxBurdenAllIndexGraphic"
+                class="com.tyut.sssy.infosearch.actions.graphic.decision.TaxBurdenAllIndexsAnalysisGraphicAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">decisionAnalysisSearch_taxBurdenSubIndexTable</param>
+                <param name="swjg">${swjg}</param>
+                <param name="nsrsbh">${nsrsbh}</param>
+                <param name="qyzclx">${qyzclx}</param>
+                <param name="cy">${cy}</param>
+                <param name="hy">${hy}</param>
+                <param name="fxzb">${fxzb}</param>
+                <param name="nd">${nd}</param>
+                <param name="monthPeriod">${monthPeriod}</param>
+            </result>
+        </action>
+        <!--end-->
+        <!--税源分指标微观分析-->
+        <action name="taxBurdenSubIndexGraphic"
+                class="com.tyut.sssy.infosearch.actions.graphic.decision.TaxBurdenSubIndexAnalysisGraphicAction">
+        </action>
+        <!--end-->
+
+        <!--end-->
+
+    </package>
+    <!--}图表链接功能-->
+
+    <!-- 信息查询 -->
+    <package name="infoSearch" extends="struts-default">
+
+        <!-- 税收类查询 -->
+        <action
+                name="taxCollectionSearch_*"
+                class="com.tyut.sssy.infosearch.actions.TaxCollectionSearchAction"
+                method="{1}">
+
+            <!-- 税收收入完成情况表 -->
+            <result name="show_tax_collection_finish_table_condition_ui">
+                /proj/info_search/tax_collection_search/tax_collection_input_finish_table/tax_collection_input_finish_condition.jsp
+            </result>
+
+            <result name="tax_collection_finish_table">
+                /proj/info_search/tax_collection_search/tax_collection_input_finish_table/tax_collection_input_finish_table.jsp
+            </result>
+
+            <!-- 税收收入结构变化表 -->
+            <result name="show_tax_collection_structure_change_table_condition_ui">
+                /proj/info_search/tax_collection_search/tax_collection_input_structure_change_table/tax_collection_input_structure_change_condition.jsp
+            </result>
+
+            <result name="tax_collection_structure_change_table">
+                /proj/info_search/tax_collection_search/tax_collection_input_structure_change_table/tax_collection_input_structure_change_table.jsp
+            </result>
+
+            <!-- 待解税金余额表 -->
+            <result name="show_to_resolve_tax_balance_table_condition_ui">
+                /proj/info_search/tax_collection_search/to_resolve_tax_balance_table/to_resolve_tax_balance_condition.jsp
+            </result>
+
+            <result name="to_resolve_tax_balance_table">
+                /proj/info_search/tax_collection_search/to_resolve_tax_balance_table/to_resolve_tax_balance_table.jsp
+            </result>
+
+            <!-- 待解税金变动情况表 -->
+            <result name="show_to_resolve_tax_change_table_condition_ui">
+                /proj/info_search/tax_collection_search/to_resolve_tax_change_table/to_resolve_tax_change_condition.jsp
+            </result>
+
+            <result name="to_resolve_tax_change_table">
+                /proj/info_search/tax_collection_search/to_resolve_tax_change_table/to_resolve_tax_change_table.jsp
+            </result>
+
+            <!-- 欠缴税金明细表 -->
+            <result name="show_own_pay_tax_detail_table_condition_ui">
+                /proj/info_search/tax_collection_search/owe_pay_tax_detail_table/owe_pay_tax_detail_condition.jsp
+            </result>
+
+            <result name="own_pay_tax_detail_table">
+                /proj/info_search/tax_collection_search/owe_pay_tax_detail_table/owe_pay_tax_detail_table.jsp
+            </result>
+
+            <!-- 重点企业实缴税收变化表 -->
+            <result name="show_firm_pay_tax_change_table_condition_ui">
+                /proj/info_search/tax_collection_search/firm_pay_tax_change_table/firm_pay_tax_change_condition.jsp
+            </result>
+
+            <result name="firm_pay_tax_change_table">
+                /proj/info_search/tax_collection_search/firm_pay_tax_change_table/firm_pay_tax_change_table.jsp
+            </result>
+
+            <!-- 企业税收台帐 -->
+            <result name="show_firm_tax_account_table_condition_ui">
+                /proj/info_search/tax_collection_search/firm_tax_account/firm_tax_account_condition.jsp
+            </result>
+
+            <result name="firm_tax_account_table">
+                /proj/info_search/tax_collection_search/firm_tax_account/firm_tax_account.jsp
+            </result>
+
+            <!-- 税收收入实时入库查询 -->
+            <result name="tax_collection_real_time_search_table">
+                /proj/info_search/tax_collection_search/tax_collection_real_time_search/tax_collection_real_time_search_table.jsp
+            </result>
+
+            <!-- 生成Excel文件 -->
+            <result name="table_to_excel" type="stream">
+                <param name="contentType">application/vnd.ms-excel</param>
+                <param name="inputName">excelStream</param>
+                <param name="contentDisposition">attachment;filename="${fileName}.xls"</param>
+                <param name="bufferSize">1024</param>
+            </result>
+        </action>
+
+        <!-- 税源类查询 -->
+        <action
+                name="taxResourceSearch_*"
+                class="com.tyut.sssy.infosearch.actions.TaxResourceSearchAction"
+                method="{1}">
+
+            <!-- 重点税源监测户统计表-->
+            <result name="show_tax_resource_monitor_table_condition_ui">
+                /proj/info_search/tax_resource_search/tax_resource_monitor_table/tax_resource_monitor_condition.jsp
+            </result>
+
+            <result name="tax_resource_monitor_table">
+                /proj/info_search/tax_resource_search/tax_resource_monitor_table/tax_resource_monitor_table.jsp
+            </result>
+
+
+            <!-- 重点税源监控企业明细表-->
+            <result name="show_tax_resource_monitor_firm_detail_table_condition_ui">
+                /proj/info_search/tax_resource_search/tax_resource_monitor_firm_detail_table/tax_resource_monitor_firm_detail_condition.jsp
+            </result>
+
+            <result name="tax_resource_monitor_firm_detail_table">
+                /proj/info_search/tax_resource_search/tax_resource_monitor_firm_detail_table/tax_resource_monitor_firm_detail_table.jsp
+            </result>
+
+            <!-- 企业基础信息查询表-->
+            <result name="show_firm_info_search_table_condition_ui">
+                /proj/info_search/tax_resource_search/firm_info_search_table/firm_info_search_condition.jsp
+            </result>
+
+            <result name="firm_info_search_table">
+                /proj/info_search/tax_resource_search/firm_info_search_table/firm_info_search_table.jsp
+            </result>
+
+            <!-- 企业经营信息表 -->
+            <result name="show_firm_run_info_table_condition_ui">
+                /proj/info_search/tax_resource_search/firm_run_info_table/firm_run_info_condition.jsp
+            </result>
+
+            <result name="firm_run_info_table">
+                /proj/info_search/tax_resource_search/firm_run_info_table/firm_run_info_table.jsp
+            </result>
+
+            <!-- 税源总量增减变动情况表 -->
+            <result name="show_tax_resource_sum_change_table_condition_ui">
+                /proj/info_search/tax_resource_search/tax_resource_sum_change_table/tax_resource_sum_change_condition.jsp
+            </result>
+
+            <result name="tax_resource_sum_change_table">
+                /proj/info_search/tax_resource_search/tax_resource_sum_change_table/tax_resource_sum_change_table.jsp
+            </result>
+
+            <!-- 税源质量变动情况表 -->
+            <result name="show_tax_resource_quality_change_table_condition_ui">
+                /proj/info_search/tax_resource_search/tax_resource_quality_change_table/tax_resource_quality_change_condition.jsp
+            </result>
+
+            <result name="tax_resource_quality_change_table">
+                /proj/info_search/tax_resource_search/tax_resource_quality_change_table/tax_resource_quality_change_table.jsp
+            </result>
+
+            <!-- 利润表 -->
+            <result name="show_interest_table_condition_ui">
+                /proj/info_search/tax_resource_search/interest_table/interest_condition.jsp
+            </result>
+
+            <result name="interest_table">
+                /proj/info_search/tax_resource_search/interest_table/interest_table.jsp
+            </result>
+
+            <!-- 资产负债表 -->
+            <result name="show_asset_liability_table_condition_ui">
+                /proj/info_search/tax_resource_search/asset_liability_table/asset_liability_condition.jsp
+            </result>
+
+            <result name="asset_liability_table">
+                /proj/info_search/tax_resource_search/asset_liability_table/asset_liability_table.jsp
+            </result>
+
+            <!-- 生成Excel文件 -->
+            <result name="table_to_excel" type="stream">
+                <param name="contentType">application/vnd.ms-excel</param>
+                <param name="inputName">excelStream</param>
+                <param name="contentDisposition">attachment;filename="${fileName}.xls"</param>
+                <param name="bufferSize">1024</param>
+            </result>
+
+        </action>
+
+        <!-- 税负类查询 -->
+        <action
+                name="taxBurdenSearch_*"
+                class="com.tyut.sssy.infosearch.actions.TaxBurdenSearchAction"
+                method="{1}">
+
+            <!-- 税负分析查询表-->
+            <result name="show_tax_burden_analysis_search_condition_ui">
+                /proj/info_search/tax_burden_analysis_search/tax_burden_analysis_search_table/tax_burden_analysis_search_condition.jsp
+            </result>
+
+            <result name="tax_burden_analysis_search_table">
+                /proj/info_search/tax_burden_analysis_search/tax_burden_analysis_search_table/tax_burden_analysis_search_table.jsp
+            </result>
+
+            <!-- 生成Excel文件 -->
+            <result name="table_to_excel" type="stream">
+                <param name="contentType">application/vnd.ms-excel</param>
+                <param name="inputName">excelStream</param>
+                <param name="contentDisposition">attachment;filename="${fileName}.xls"</param>
+                <param name="bufferSize">1024</param>
+            </result>
+
+        </action>
+
+        <!-- 决策分析类查询 -->
+        <action
+                name="decisionAnalysisSearch_*"
+                class="com.tyut.sssy.infosearch.actions.DecisionAnalysisSearchAction"
+                method="{1}">
+
+            <!-- 税收增长与税源发展指数分析查询-->
+            <result name="show_tax_grow_tax_resource_develop_index_table_condition_ui">
+                /proj/info_search/decision_analysis_search/tax_grow_tax_resource_develop_index/tax_grow_tax_resource_develop_index_condition.jsp
+            </result>
+
+            <result name="tax_grow_tax_resource_develop_index_table">
+                /proj/info_search/decision_analysis_search/tax_grow_tax_resource_develop_index/tax_grow_tax_resource_develop_index.jsp
+            </result>
+
+            <result name="index_structure_table">
+                /proj/info_search/decision_analysis_search/tax_grow_tax_resource_develop_index/index_structure_table.jsp
+            </result>
+
+            <!-- 税收结构分析查询表 -->
+            <result name="show_tax_collection_structure_analysis_table_condition_ui">
+                /proj/info_search/decision_analysis_search/tax_collection_structure_analysis_table/tax_collection_structure_analysis_condition.jsp
+            </result>
+
+            <result name="tax_collection_structure_analysis_table">
+                /proj/info_search/decision_analysis_search/tax_collection_structure_analysis_table/tax_collection_structure_analysis_table.jsp
+            </result>
+
+            <!-- 税收类所有指标分析查询表 -->
+            <result name="show_tax_collection_all_index_table_condition_ui">
+                /proj/info_search/decision_analysis_search/tax_collection_all_index_table/tax_collection_all_index_condition.jsp
+            </result>
+
+            <result name="tax_collection_all_index_table">
+                /proj/info_search/decision_analysis_search/tax_collection_all_index_table/tax_collection_all_index_table.jsp
+            </result>
+
+            <!-- 税收类分指标分析查询表 -->
+            <result name="show_tax_collection_sub_index_table_condition_ui">
+                /proj/info_search/decision_analysis_search/tax_collection_sub_index_table/tax_collection_sub_index_condition.jsp
+            </result>
+
+            <result name="tax_collection_sub_index_table">
+                /proj/info_search/decision_analysis_search/tax_collection_sub_index_table/tax_collection_sub_index_table.jsp
+            </result>
+
+            <!-- 税源类所有指标分析查询表 -->
+            <result name="show_tax_resource_all_index_table_condition_ui">
+                /proj/info_search/decision_analysis_search/tax_resource_all_index_table/tax_resource_all_index_condition.jsp
+            </result>
+
+            <result name="tax_resource_all_index_table">
+                /proj/info_search/decision_analysis_search/tax_resource_all_index_table/tax_resource_all_index_table.jsp
+            </result>
+
+            <!-- 税源类分指标分析查询表 -->
+            <result name="show_tax_resource_sub_index_table_condition_ui">
+                /proj/info_search/decision_analysis_search/tax_resource_sub_index_table/tax_resource_sub_index_condition.jsp
+            </result>
+
+            <result name="tax_resource_sub_index_table">
+                /proj/info_search/decision_analysis_search/tax_resource_sub_index_table/tax_resource_sub_index_table.jsp
+            </result>
+
+            <!-- 税负类所有指标分析查询表 -->
+            <result name="show_tax_burden_all_index_table_condition_ui">
+                /proj/info_search/decision_analysis_search/tax_burden_all_index_table/tax_burden_all_index_condition.jsp
+            </result>
+
+            <result name="tax_burden_all_index_table">
+                /proj/info_search/decision_analysis_search/tax_burden_all_index_table/tax_burden_all_index_table.jsp
+            </result>
+
+            <!-- 税负类分指标分析查询表 -->
+            <result name="show_tax_burden_sub_index_table_condition_ui">
+                /proj/info_search/decision_analysis_search/tax_burden_sub_index_table/tax_burden_sub_index_condition.jsp
+            </result>
+
+            <result name="tax_burden_sub_index_table">
+                /proj/info_search/decision_analysis_search/tax_burden_sub_index_table/tax_burden_sub_index_table.jsp
+            </result>
+
+            <!-- 生成Excel文件 -->
+            <result name="table_to_excel" type="stream">
+                <param name="contentType">application/vnd.ms-excel</param>
+                <param name="inputName">excelStream</param>
+                <param name="contentDisposition">attachment;filename="${fileName}.xls"</param>
+                <param name="bufferSize">1024</param>
+            </result>
+
+        </action>
+
+        <!-- 任务查询 -->
+        <action
+                name="taskSearch_*"
+                class="com.tyut.sssy.infosearch.actions.TaskSearchAction"
+                method="{1}">
+
+            <result name="show_micro_task_search_condition_ui">
+                /proj/info_search/task_search/micro_task_search/micro_task_search_condition.jsp
+            </result>
+
+            <result name="micro_task_search_table">
+                proj/info_search/task_search/micro_task_search/micro_task_search_table.jsp
+            </result>
+
+            <result name="show_macro_task_search_condition_ui">
+                /proj/info_search/task_search/macro_task_search/macro_task_search_condition.jsp
+            </result>
+
+            <result name="macro_task_search_table">
+                /proj/info_search/task_search/macro_task_search/macro_task_search_table.jsp
+            </result>
+
+        </action>
+
+
+        <!--征管类查询-->
+        <action name="taxCollectionAndManager_*" class="com.tyut.sssy.taxManager.action.TaxCollectionAndManagerAction"
+                method="{1}"
+                >
+            <!--税务登记情况-->
+            <result name="show_tax_register_table_condition_ui">
+                /proj/info_search/tax_collect_and_manager_search/tax_register/tax_register_condition.jsp
+            </result>
+            <result name="show_tax_register_table">
+                /proj/info_search/tax_collect_and_manager_search/tax_register/tax_register_table.jsp
+            </result>
+            <!--end-->
+            <!--发票销售情况-->
+            <result name="show_tax_invoice_sales_table_condition_ui">
+                /proj/info_search/tax_collect_and_manager_search/tax_invoice_sales/tax_invoice_sales_condition.jsp
+            </result>
+            <result name="show_tax_invoice_sales_table">
+                /proj/info_search/tax_collect_and_manager_search/tax_invoice_sales/tax_invoice_sales_table.jsp
+            </result>
+            <!--end-->
+            <!--机打发票-->
+            <result name="show_tax_machine_compare_table_condition_ui">
+                /proj/info_search/tax_collect_and_manager_search/tax_machine_compare/tax_machine_compare_condition.jsp
+            </result>
+            <result name="show_tax_machine_compare_table">
+                /proj/info_search/tax_collect_and_manager_search/tax_machine_compare/tax_machine_compare_table.jsp
+            </result>
+            <!--end -->
+            <!--外埠纳税人申报-->
+            <result name="show_tax_other_city_table_condition_ui">
+                /proj/info_search/tax_collect_and_manager_search/tax_other_city/tax_other_city_condition.jsp
+            </result>
+            <result name="show_tax_other_city_table">
+                /proj/info_search/tax_collect_and_manager_search/tax_other_city/tax_other_city_table.jsp
+            </result>
+            <!--end -->
+            <!--外埠经营人申报-->
+            <result name="show_tax_other_city_run_table_condition_ui">
+                /proj/info_search/tax_collect_and_manager_search/tax_other_city_run/tax_other_city_run_condition.jsp
+            </result>
+            <result name="show_tax_other_city_run_table">
+                /proj/info_search/tax_collect_and_manager_search/tax_other_city_run/tax_other_city_run_table.jsp
+            </result>
+            <!--end -->
+
+            <!--代开发票申报-->
+            <result name="show_tax_invoice_consignment_table_condition_ui">
+                /proj/info_search/tax_collect_and_manager_search/tax_invoice_consignment/tax_invoice_consignment_condition.jsp
+            </result>
+            <result name="show_tax_invoice_consignment_table">
+                /proj/info_search/tax_collect_and_manager_search/tax_invoice_consignment/tax_invoice_consignment_table.jsp
+            </result>
+            <!--end -->
+
+            <!--申报情况-->
+            <result name="show_tax_declare_table_condition_ui">
+                /proj/info_search/tax_collect_and_manager_search/tax_declare/tax_delcare_condition.jsp
+            </result>
+            <result name="show_tax_declare_table">
+                /proj/info_search/tax_collect_and_manager_search/tax_declare/tax_declare_table.jsp
+            </result>
+            <!--end -->
+
+            <!--网报情况-->
+            <result name="show_tax_net_declare_table_condition_ui">
+                /proj/info_search/tax_collect_and_manager_search/tax_net_declare/tax_net_delcare_condition.jsp
+            </result>
+            <result name="show_tax_net_declare_table">
+                /proj/info_search/tax_collect_and_manager_search/tax_net_declare/tax_net_declare_table.jsp
+            </result>
+            <!--end -->
+
+            <!--Tips分析查询-->
+            <result name="show_tips_condition_ui">
+                /proj/info_search/tax_collect_and_manager_search/tips/tips_condition.jsp
+            </result>
+            <result name="show_tips_table">
+                /proj/info_search/tax_collect_and_manager_search/tips/tips_table.jsp
+            </result>
+            <!--end -->
+        </action>
+    </package>
+
+    <!-- 工作任务管理 -->
+    <package name="task" extends="struts-default">
+        <!-- 微观工作任务 -->
+        <action
+                name="microTask_*"
+                class="com.tyut.sssy.task.actions.MicroTaskAction"
+                method="{1}">
+
+            <!-- 微观工作任务提取 -->
+            <result name="show_micro_task_extract_condition_ui">
+                /proj/task_mgr/task_extract/micro_task_extract/micro_task_extract_condition.jsp
+            </result>
+
+            <result name="show_micro_task_extract_table">
+                /proj/task_mgr/task_extract/micro_task_extract/micro_task_extract_table.jsp
+            </result>
+
+            <result name="extract_micro_task" type="chain">
+                <param name="actionName">microTask_showMicroTaskExtractConditionUI</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <result name="show_index_detail">
+                /proj/task_mgr/index_detail.jsp
+            </result>
+
+            <!-- 微观任务发布 -->
+            <result name="show_micro_task_publish_condition_ui">
+                /proj/task_mgr/task_publish/micro_task_publish/micro_task_publish_condition.jsp
+            </result>
+
+            <result name="show_micro_task_publish_table">
+                /proj/task_mgr/task_publish/micro_task_publish/micro_task_publish_table.jsp
+            </result>
+
+            <result name="publish_micro_task" type="chain">
+                <param name="actionName">microTask_showMicroTaskPublishConditionUI</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <result name="micro_task_publish_report">
+                /proj/task_mgr/task_publish/micro_task_publish/micro_task_publish_succ.jsp
+            </result>
+
+            <!-- 微观任务接收 -->
+            <result name="show_micro_task_receive_ui">
+                /proj/task_mgr/task_receive/micro_task_receive/micro_task_receive_ui.jsp
+            </result>
+
+            <result name="show_micro_task_receive_table">
+                /proj/task_mgr/task_receive/micro_task_receive/micro_task_receive_table.jsp
+            </result>
+
+            <result name="show_micro_task_receive_report">
+                /proj/task_mgr/task_receive/micro_task_receive/micro_task_receive_report.jsp
+            </result>
+
+            <result name="receive_micro_task" type="chain">
+                <param name="actionName">microTask_showMicroTaskReceiveUI</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <!-- 微观任务反馈 -->
+            <result name="show_micro_task_to_feedback_table">
+                /proj/task_mgr/task_receive/micro_task_receive/micro_task_to_feedback_table.jsp
+            </result>
+
+            <result name="show_micro_task_edit_survey_report">
+                /proj/task_mgr/task_receive/micro_task_receive/edit_micro_task_survey_report.jsp
+            </result>
+
+            <result name="feedback_micro_task" type="chain">
+                <param name="actionName">microTask_showMicroTaskReceiveUI</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <!-- 已反馈任务列表 -->
+            <result name="show_micro_task_to_exam_table">
+                /proj/task_mgr/task_receive/micro_task_receive/micro_task_to_exam_table.jsp
+            </result>
+
+            <result name="show_micro_task_survey_report">
+                /proj/task_mgr/task_receive/micro_task_receive/micro_task_survey_report.jsp
+            </result>
+
+            <!-- 已评价任务列表 -->
+            <result name="show_micro_task_finish_exam_table_in_receive_section">
+                /proj/task_mgr/task_receive/micro_task_receive/micro_task_finish_exam_table_in_receive_section.jsp
+            </result>
+
+
+            <!-- 微观任务考核和评价 -->
+            <result name="show_micro_task_exam_ui">
+                /proj/task_mgr/task_exam/micro_task_exam/micro_task_exam_ui.jsp
+            </result>
+
+            <!-- 显示已发布任务列表 -->
+            <result name="show_micro_task_publish_table_in_exam_section">
+                /proj/task_mgr/task_exam/micro_task_exam/micro_task_publish_table_in_exam_section.jsp
+            </result>
+
+            <!-- 显示需评价的任务列表 -->
+            <result name="show_micro_task_to_exam_table_in_exam_section">
+                /proj/task_mgr/task_exam/micro_task_exam/micro_task_to_exam_table_in_exam_section.jsp
+            </result>
+
+            <!-- 打开微观任务评价窗口 -->
+            <result name="show_micro_task_submit_exam_report">
+                /proj/task_mgr/task_exam/micro_task_exam/micro_task_submit_exam_report.jsp
+            </result>
+
+            <result name="exam_micro_task" type="chain">
+                <param name="actionName">microTask_showMicroTaskExamUI</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <result name="finish_exam_table_in_exam_section">
+                /proj/task_mgr/task_exam/micro_task_exam/micro_task_finish_exam_table_in_exam_section.jsp
+            </result>
+
+            <result name="show_micro_task_exam_report">
+                /proj/task_mgr/task_exam/micro_task_exam/micro_task_exam_report.jsp
+            </result>
+
+            <!-- 设定任务阈值 -->
+            <result name="show_task_threshold_setting">
+                /proj/sys_setting/task_threshold_setting/task_threshold_setting.jsp
+            </result>
+
+            <result name="set_threshold" type="chain">
+                <param name="actionName">microTask_showTaskThresholdSetting</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <!-- 显示总分值计算过程 -->
+            <result name="show_zfz_detail">
+                /proj/task_mgr/micro_task_calc_detail.jsp
+            </result>
+        </action>
+
+        <!-- 风险微观工作任务 -->
+        <action
+                name="riskMicroTask_*"
+                class="com.tyut.sssy.task.actions.RiskMicroTaskAction"
+                method="{1}">
+
+            <!-- 微观工作任务提取 -->
+            <result name="show_risk_micro_task_extract_condition_ui">
+                /proj/task_mgr/task_extract/risk_micro_task_extract/risk_micro_task_extract_condition.jsp
+            </result>
+
+            <result name="show_risk_micro_task_extract_table">
+                /proj/task_mgr/task_extract/risk_micro_task_extract/risk_micro_task_extract_table.jsp
+            </result>
+
+            <!--风险微观任务详情-->
+            <result name="show_risk_detail_succ">
+                /proj/task_mgr/risk_detail.jsp
+            </result>
+
+            <!--风险微观任务提取-->
+            <result name="extract_risk_micro_task" type="chain">
+                <param name="actionName">riskMicroTask_showRiskMicroTaskExtractConditionUI</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+
+            <!-- 显示风险微观任务发布 -->
+            <result name="show_risk_micro_task_publish_condition_ui">
+                /proj/task_mgr/task_publish/risk_micro_task_publish/risk_micro_task_publish_condition.jsp
+            </result>
+
+            <!--显示风险微观任务发布列表-->
+            <result name="show_risk_micro_task_publish_table">
+                /proj/task_mgr/task_publish/risk_micro_task_publish/risk_micro_task_publish_table.jsp
+            </result>
+
+            <!--发布风险微观任务-->
+            <result name="publish_risk_micro_task" type="chain">
+                <param name="actionName">riskMicroTask_showRiskMicroTaskPublishConditionUI</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <!--报告-->
+            <result name="risk_micro_task_publish_report">
+                /proj/task_mgr/task_publish/risk_micro_task_publish/risk_micro_task_publish_succ.jsp
+            </result>
+
+            <!-- 微观任务接收 -->
+            <result name="show_risk_micro_task_receive_ui">
+                /proj/task_mgr/task_receive/risk_micro_task_receive/risk_micro_task_receive_ui.jsp
+            </result>
+
+            <result name="show_risk_micro_task_receive_table">
+                /proj/task_mgr/task_receive/risk_micro_task_receive/risk_micro_task_receive_table.jsp
+            </result>
+
+            <result name="show_risk_micro_task_receive_report">
+                /proj/task_mgr/task_receive/risk_micro_task_receive/risk_micro_task_receive_report.jsp
+            </result>
+
+            <result name="receive_risk_micro_task" type="chain">
+                <param name="actionName">riskMicroTask_showRiskMicroTaskReceiveUI</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <!-- 微观任务反馈 -->
+            <result name="show_risk_micro_task_to_feedback_table">
+                /proj/task_mgr/task_receive/risk_micro_task_receive/risk_micro_task_to_feedback_table.jsp
+            </result>
+
+            <result name="show_risk_micro_task_edit_survey_report">
+                /proj/task_mgr/task_receive/risk_micro_task_receive/edit_risk_micro_task_survey_report.jsp
+            </result>
+
+            <result name="feedback_risk_micro_task" type="chain">
+                <param name="actionName">riskMicroTask_showRiskMicroTaskReceiveUI</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <!-- 已反馈任务列表 -->
+            <result name="show_risk_micro_task_to_exam_table">
+                /proj/task_mgr/task_receive/risk_micro_task_receive/risk_micro_task_to_exam_table.jsp
+            </result>
+
+            <result name="show_risk_micro_task_survey_report">
+                /proj/task_mgr/task_receive/risk_micro_task_receive/risk_micro_task_survey_report.jsp
+            </result>
+
+            <!-- 已评价任务列表 -->
+            <result name="show_risk_micro_task_finish_exam_table_in_receive_section">
+                /proj/task_mgr/task_receive/risk_micro_task_receive/risk_micro_task_finish_exam_table_in_receive_section.jsp
+            </result>
+
+
+            <!-- 微观任务考核和评价 -->
+            <result name="show_risk_micro_task_exam_ui">
+                /proj/task_mgr/task_exam/risk_micro_task_exam/risk_micro_task_exam_ui.jsp
+            </result>
+
+            <!-- 显示已发布任务列表 -->
+            <result name="show_risk_micro_task_publish_table_in_exam_section">
+                /proj/task_mgr/task_exam/risk_micro_task_exam/risk_micro_task_publish_table_in_exam_section.jsp
+            </result>
+
+            <!-- 显示需评价的任务列表 -->
+            <result name="show_risk_micro_task_to_exam_table_in_exam_section">
+                /proj/task_mgr/task_exam/risk_micro_task_exam/risk_micro_task_to_exam_table_in_exam_section.jsp
+            </result>
+
+            <!-- 打开微观任务评价窗口 -->
+            <result name="show_risk_micro_task_submit_exam_report">
+                /proj/task_mgr/task_exam/risk_micro_task_exam/risk_micro_task_submit_exam_report.jsp
+            </result>
+
+            <result name="exam_risk_micro_task" type="chain">
+                <param name="actionName">riskMicroTask_showRiskMicroTaskExamUI</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <result name="finish_exam_table_in_exam_section">
+                /proj/task_mgr/task_exam/risk_micro_task_exam/risk_micro_task_finish_exam_table_in_exam_section.jsp
+            </result>
+
+            <result name="show_risk_micro_task_exam_report">
+                /proj/task_mgr/task_exam/risk_micro_task_exam/risk_micro_task_exam_report.jsp
+            </result>
+
+            <!-- 设定任务阈值 -->
+            <result name="show_task_threshold_setting">
+                /proj/sys_setting/task_threshold_setting/task_threshold_setting.jsp
+            </result>
+
+            <result name="set_threshold" type="chain">
+                <param name="actionName">riskMicroTask_showTaskThresholdSetting</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <!-- 显示总分值计算过程 -->
+            <result name="show_zfz_detail">
+                /proj/task_mgr/risk_micro_task_calc_detail.jsp
+            </result>
+        </action>
+
+        <!-- 总/分量工作任务 -->
+        <action
+                name="macroTask_*"
+                class="com.tyut.sssy.task.actions.MacroTaskAction"
+                method="{1}">
+
+            <!-- 总/分量任务提取 -->
+            <result name="show_macro_task_extract_condition_ui">
+                /proj/task_mgr/task_extract/macro_task_extract/macro_task_extract_condition.jsp
+            </result>
+
+            <result name="show_macro_task_extract_table">
+                /proj/task_mgr/task_extract/macro_task_extract/macro_task_extract_table.jsp
+            </result>
+
+            <result name="show_index_detail">
+                /proj/task_mgr/macro_index_detail.jsp
+            </result>
+
+            <result name="extract_macro_task" type="chain">
+                <param name="actionName">macroTask_showMacroTaskExtractConditionUI</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <!-- 总/分量任务发布 -->
+            <result name="show_macro_task_publish_condition_ui">
+                /proj/task_mgr/task_publish/macro_task_publish/macro_task_publish_condition.jsp
+            </result>
+
+            <result name="show_macro_task_publish_table">
+                /proj/task_mgr/task_publish/macro_task_publish/macro_task_publish_table.jsp
+            </result>
+
+            <result name="publish_macro_task" type="chain">
+                <param name="actionName">macroTask_showMacroTaskPublishConditionUI</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <result name="macro_task_publish_report">
+                /proj/task_mgr/task_publish/macro_task_publish/macro_task_publish_report.jsp
+            </result>
+
+            <!-- 总/分量任务接收 -->
+            <result name="show_macro_task_receive_ui">
+                /proj/task_mgr/task_receive/macro_task_receive/macro_task_receive_ui.jsp
+            </result>
+
+            <result name="show_macro_task_to_receive_table">
+                /proj/task_mgr/task_receive/macro_task_receive/macro_task_to_receive_table.jsp
+            </result>
+
+            <result name="show_macro_task_receive_report">
+                /proj/task_mgr/task_receive/macro_task_receive/macro_task_receive_report.jsp
+            </result>
+
+            <result name="receive_macro_task" type="chain">
+                <param name="actionName">macroTask_showMacroTaskReceiveUI</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <result name="show_macro_task_to_feedback_table">
+                /proj/task_mgr/task_receive/macro_task_receive/macro_task_to_feedback_table.jsp
+            </result>
+
+            <result name="show_macro_task_edit_survey_report">
+                /proj/task_mgr/task_receive/macro_task_receive/edit_macro_task_survey_report.jsp
+            </result>
+
+            <result name="feedback_macro_task" type="chain">
+                <param name="actionName">macroTask_showMacroTaskReceiveUI</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <result name="show_macro_task_to_exam_table">
+                /proj/task_mgr/task_receive/macro_task_receive/macro_task_to_exam_table.jsp
+            </result>
+
+            <result name="show_macro_task_survey_report">
+                /proj/task_mgr/task_receive/macro_task_receive/macro_task_survey_report.jsp
+            </result>
+
+            <result name="show_macro_task_finish_exam_table_in_receive_section">
+                /proj/task_mgr/task_receive/macro_task_receive/macro_task_finish_exam_table_in_receive_section.jsp
+            </result>
+
+            <!-- 总/分量任务评价 -->
+            <result name="show_macro_task_exam_ui">
+                /proj/task_mgr/task_exam/macro_task_exam/macro_task_exam_ui.jsp
+            </result>
+
+            <result name="show_macro_task_publish_table_in_exam_section">
+                /proj/task_mgr/task_exam/macro_task_exam/macro_task_publish_table_in_exam_section.jsp
+            </result>
+
+            <result name="show_macro_task_to_exam_table_in_exam_section">
+                /proj/task_mgr/task_exam/macro_task_exam/macro_task_to_exam_table_in_exam_section.jsp
+            </result>
+
+            <result name="show_macro_task_submit_exam_report">
+                /proj/task_mgr/task_exam/macro_task_exam/macro_task_submit_exam_report.jsp
+            </result>
+
+            <result name="exam_macro_task" type="chain">
+                <param name="actionName">macroTask_showMacroTaskExamUI</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <result name="show_finish_exam_table_in_exam_section">
+                /proj/task_mgr/task_exam/macro_task_exam/macro_task_finish_exam_table_in_exam_section.jsp
+            </result>
+
+            <result name="show_macro_task_exam_report">
+                /proj/task_mgr/task_exam/macro_task_exam/macro_task_exam_report.jsp
+            </result>
+
+            <result name="show_zfz_detail">
+                /proj/task_mgr/macro_task_calc_detail.jsp
+            </result>
+
+        </action>
+
+        <!-- 微观任务考核 -->
+        <action
+                name="microTaskTest_*"
+                class="com.tyut.sssy.task.actions.MicroTaskTestAction"
+                method="{1}">
+
+            <result name="show_rwzxry_list">
+                /proj/task_mgr/task_test/micro_task_test/micro_task_test_table.jsp
+            </result>
+
+            <result name="show_submit_test_report">
+                /proj/task_mgr/task_test/micro_task_test/micro_task_submit_test_report.jsp
+            </result>
+
+            <result name="submit_test_report" type="chain">
+                <param name="actionName">microTaskTest_showMicroTaskTestUI</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <result name="show_micro_task_test_ui">
+                /proj/task_mgr/task_test/micro_task_test/micro_task_test_ui.jsp
+            </result>
+
+            <result name="show_micro_task_test_order_table">
+                /proj/task_mgr/task_test/micro_task_test/micro_task_test_order_table.jsp
+            </result>
+
+        </action>
+
+        <!-- 风险微观任务考核 -->
+        <action
+                name="riskMicroTaskTest_*"
+                class="com.tyut.sssy.task.actions.RiskMicroTaskTestAction"
+                method="{1}">
+
+            <result name="show_risk_rwzxry_list">
+                /proj/task_mgr/task_test/risk_micro_task_test/risk_micro_task_test_table.jsp
+            </result>
+
+            <result name="show_submit_risk_test_report">
+                /proj/task_mgr/task_test/risk_micro_task_test/risk_micro_task_submit_test_report.jsp
+            </result>
+
+            <result name="submit_risk_test_report" type="chain">
+                <param name="actionName">riskMicroTaskTest_showRiskMicroTaskTestUI</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <result name="show_risk_micro_task_test_ui">
+                /proj/task_mgr/task_test/risk_micro_task_test/risk_micro_task_test_ui.jsp
+            </result>
+
+            <result name="show_risk_micro_task_test_order_table">
+                /proj/task_mgr/task_test/risk_micro_task_test/risk_micro_task_test_order_table.jsp
+            </result>
+
+        </action>
+
+        <!-- 总/分量任务考核 -->
+        <action
+                name="macroTaskTest_*"
+                class="com.tyut.sssy.task.actions.MacroTaskTestAction"
+                method="{1}">
+
+            <result name="show_macro_task_test_ui">
+                /proj/task_mgr/task_test/macro_task_test/macro_task_test_ui.jsp
+            </result>
+
+            <result name="show_rwzxry_list">
+                /proj/task_mgr/task_test/macro_task_test/macro_task_test_table.jsp
+            </result>
+
+            <result name="show_submit_test_report">
+                /proj/task_mgr/task_test/macro_task_test/macro_task_submit_test_report.jsp
+            </result>
+
+            <result name="submit_test_report" type="chain">
+                <param name="actionName">macroTaskTest_showMacroTaskTestUI</param>
+                <param name="msg">${msg}</param>
+            </result>
+
+            <result name="show_macro_task_test_order_table">
+                /proj/task_mgr/task_test/macro_task_test/macro_task_test_order_table.jsp
+            </result>
+
+        </action>
+
+    </package>
+
+    <!-- 系统决策报告 -->
+    <package name="decisionReport" extends="struts-default">
+        <action
+                name="decisionReport_*"
+                class="com.tyut.sssy.report.actions.DecisionReportAction"
+                method="{1}">
+
+            <result name="show_decision_report">
+                /proj/sys_decision_report/report_template.jsp
+            </result>
+
+            <!-- 生成Word文件 -->
+            <result name="report_to_word">
+                /proj/sys_decision_report/report_to_word.jsp
+            </result>
+
+        </action>
+    </package>
+
+    <!-- 首页显示 -->
+    <package name="home" extends="struts-default">
+        <action
+                name="home_*"
+                class="com.tyut.sssy.sysmgr.actions.HomeAction"
+                method="{1}">
+
+            <result name="show_task_notification">
+                /home.jsp
+            </result>
+        </action>
+    </package>
+
+</struts>

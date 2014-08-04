@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/web/proj/info_search/tax_collect_and_manager_search/tax_declare/tax_declare_table.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/proj/info_search/tax_collect_and_manager_search/tax_declare/tax_delcare_condition.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/proj/info_search/tax_collect_and_manager_search/tax_invoice_consignment/tax_invoice_consignment_condition.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/proj/info_search/tax_collect_and_manager_search/tax_invoice_consignment/tax_invoice_consignment_table.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/proj/info_search/tax_collect_and_manager_search/tax_invoice_sales/tax_invoice_sales_condition.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/proj/info_search/tax_collect_and_manager_search/tax_invoice_sales/tax_invoice_sales_table.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/proj/info_search/tax_collect_and_manager_search/tax_machine_compare/tax_machine_compare_condition.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/proj/info_search/tax_collect_and_manager_search/tax_net_declare/tax_net_declare_table.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/proj/info_search/tax_collect_and_manager_search/tax_net_declare/tax_net_delcare_condition.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/proj/info_search/tax_collect_and_manager_search/tax_other_city/tax_other_city_condition.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/proj/info_search/tax_collect_and_manager_search/tax_other_city/tax_other_city_table.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/proj/info_search/tax_collect_and_manager_search/tax_other_city_run/tax_other_city_run_condition.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/proj/info_search/tax_collect_and_manager_search/tax_other_city_run/tax_other_city_run_table.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/proj/info_search/tax_collect_and_manager_search/tax_register/tax_register_condition.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/proj/info_search/tax_collect_and_manager_search/tax_register/tax_register_table.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/proj/info_search/tax_collect_and_manager_search/tips/tips_condition.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/proj/info_search/tax_collect_and_manager_search/tips/tips_table.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/proj/sys_setting/menu_mgr.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/proj/sys_setting/role_modify.jsp" value="file://$PROJECT_DIR$/web" />
+      </map>
+    </option>
+  </component>
+</project>
+

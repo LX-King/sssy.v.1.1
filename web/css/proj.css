@@ -1,0 +1,298 @@
+.icon-expand-all {
+    background-image: url(../images/expand-all.gif) !important;
+}
+
+.icon-collapse-all {
+    background-image: url(../images/collapse-all.gif) !important;
+}
+
+/*刘翔修改 针对税收征管的改动*/
+
+/*��Ϣ��ѯ����CSS*/
+.search_table {
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.search_table th {
+    background: #DFE8F6;
+    border: solid 1px #15428B;
+    height: 30px;
+    text-align: center;
+}
+
+.search_table td {
+    background: #DFE8F6;
+    border: solid 1px #15428B;
+    height: 30px;
+    text-align: right;
+}
+
+/*刘翔修改于2014-02-03*/
+/*begin*/
+.lx-tm {
+
+}
+
+.lx-tm td {
+    text-align: center;
+}
+
+/*end*/
+
+/*��Ϣ��ѯ����CSS*/
+
+/*ͼ������CSS*/
+a.img:link {
+    text-decoration: none;
+    color: #15428B;
+}
+
+a.img:active {
+    text-decoration: blink;
+}
+
+a.img:hover {
+    text-decoration: underline;
+    color: red
+}
+
+����
+a.img:visited {
+    text-decoration: none;
+    color: #15428B;
+}
+
+/*ͼ������CSS*/
+
+/* form */
+.sssy_form {
+    font-size: 12px;
+}
+
+/* form */
+
+/* form table */
+table.datagrid {
+    border-collapse: collapse;
+    border: 1px solid #666;
+    font-size: 12px;
+}
+
+table.datagrid th {
+    color: #333;
+    padding: 4px;
+    background: #9cf;
+    border: 1px solid #666;
+}
+
+table.datagrid td {
+    padding: 5px 4px;
+    border: 1px solid #666;
+}
+
+/*���*/
+.mypanel-datagrid {
+    overflow: hidden;
+    font-size: 12px;
+    clear: both;
+    float: right;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/*������*/
+.mypanel-header {
+    padding: 2px;
+    line-height: 15px;
+    color: white /*#15428B*/;
+    font-weight: bold;
+    font-size: 13px;
+    background: url('../images/toolbar_header.png') repeat-x;
+    position: relative;
+    border: 1px solid #99BBE8;
+    border-bottom-width: 0px;
+}
+
+/**/
+.mypanel-title {
+    bakcground: url('../images/blank.gif') no-repeat;
+    height: 20px;
+    padding: 2px;
+}
+
+/*�����ͷ�ұ�ͼ��*/
+.mypanel-tool {
+    position: absolute;
+    right: 5px;
+    top: 4px;
+}
+
+/*�������*/
+.mypanel-body {
+    /*  border: 1px solid #99BBE8;
+   border-top-width: 0px;
+   border-bottom-width: 0px;*/
+    padding: 0;
+    margin: 0;
+}
+
+.mypanel-wrap {
+    position: relative;
+}
+
+/*��񹤾���*/
+.mypanel-toolbar {
+    height: auto;
+    background: url('../images/toolbar_bg.png') repeat-x /*#EFEFEF*/;
+    padding: 1px 2px;
+    border: 1px solid #99BBE8;
+    border-bottom-width: 0px;
+}
+
+.mypanel-input {
+    border: 1px solid #99BBE8;
+    width: 200px;
+}
+
+.mypanel-textarea {
+    border: 1px solid #99BBE8;
+    width: 300px;
+    height: 120px;
+}
+
+.mypanel-icon-search {
+    background: url("../images/search.gif") no-repeat;
+    display: block;
+    margin-right: 5px;
+    height: 20px;
+    width: 20px;
+    float: left;
+    border: none;
+}
+
+/* form ͷ�� */
+.form_top {
+    background-color: #D9E8FB;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* form �ײ� */
+.form_bottom {
+    background-color: #D9E8FB;
+    text-align: center;
+}
+
+.select-tree {
+    border: 1px solid #99BBE8;
+    width: 230px;
+    height: auto;
+    overflow: hidden;
+
+}
+
+/* wnd table */
+table.wnd {
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+table.wnd th {
+    color: #333;
+    padding: 4px;
+    background: #9cf;
+}
+
+table.wnd td {
+    padding: 5px 4px;
+}
+
+#graphicWin table {
+    margin-top: 20px;
+    width: 450px;
+    height: 200px;
+    padding: 5px;
+    font-size: 13px;
+}
+
+#graphicWin table td {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+#graphicWin table td p {
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+#graphicWin table .label {
+    text-align: right;
+    width: 120px;
+    vertical-align: top;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#graphicWin table td input {
+    margin: 0 5px;
+}
+
+.nsrxx_suggestion_container {
+    display: inline-block;
+    margin-right: 5px;
+    margin-right: 5px;
+    background-position: 0 -96px;
+    border: 1px solid #b6b6b6;
+    border-color: #9a9a9a #cdcdcd #cdcdcd #9a9a9a;
+    vertical-align: top;
+    position: relative;
+}
+.nsrxx_suggestion_container input{
+    border: 0;
+    padding:0;
+    height: 22px;
+    width: 220px;
+    margin: 5px 0 0 7px;
+    background: #fff;
+    font: 12px/16px arial;
+
+}
+
+.nsrxx_suggestion {
+    position: absolute;
+    border: 1px solid #817F82;
+    width: 520px;
+    height:200px;
+    overflow-y: scroll;
+    background: #fff;
+    text-align: left;
+    top:30px;
+    left:-2px;
+    padding:1px;
+    z-index: 2;
+}
+
+.nsrxx_suggestion ul li {
+    margin: 0;
+    margin-left:2px;
+    padding: 0;
+    list-style: none;
+}
+
+.nsrxx_suggestion li {
+    color: #000;
+    font: 14px arial;
+    line-height: 25px;
+    padding: 0 8px;
+    position: relative;
+    cursor: default;
+    width: auto;
+}
+
+.nsrxx_suggestion li:hover , .liHover{
+    background: #ebebeb;
+}
+

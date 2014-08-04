@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<numbers>
+    <number>
+        <value>10000,100,100</value>
+        <unit>万,百万,亿</unit>
+    </number>
+</numbers>

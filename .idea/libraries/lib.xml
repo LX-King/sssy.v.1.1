@@ -1,0 +1,52 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/msbase.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jaxen-1.1-beta-7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/poi-ooxml-schemas-3.8-20120326.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/hibernate-validator.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-lang.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jaas.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/junit.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/ognl-2.7.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-logging.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jstl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/javassist.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-collections-2.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/log4j-1.2.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/poi-ooxml-3.8-20120326.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jdbc2_0-stdext.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-io-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/standard.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/struts2-core-2.1.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/msutil.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/ehcache-1.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/poi-3.8-20120326.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jacob.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/xml-apis.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/hibernate3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-fileupload-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/json-lib-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/hibernate-commons-annotations.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/hibernate-entitymanager.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/poi-scratchpad-3.8-20120326.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jboss-archive-browsing.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/ejb3-persistence.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/xwork-core-2.1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-collections.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/asm-attrs.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/struts2-json-plugin-2.1.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/c3p0-0.9.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mssqlserver.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/urlrewritefilter-4.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/poi-excelant-3.8-20120326.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/freemarker-2.3.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jta.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-beanutils.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/ezmorph-1.0.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

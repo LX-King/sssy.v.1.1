@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="759088843">
+    <data-source source="LOCAL" name="hibernate.cfg.xml" uuid="bb8036f1-7817-4ae0-90be-192fe219d58a">
+      <jdbc-driver>com.microsoft.jdbc.sqlserver.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:microsoft:sqlserver://192.168.0.111:1433;DatabaseName=userdb</jdbc-url>
+      <user-name>test</user-name>
+      <user-password>df9bdf98df99</user-password>
+      <libraries>
+        <library>
+          <url>file://D:\IDE_WORKSPACE\sssy\沁源版\sssy.v.1.1\web\WEB-INF\lib\ezmorph-1.0.6.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+
